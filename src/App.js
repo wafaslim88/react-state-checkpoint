@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBBtn, MDBTypography } from 'mdb-react-ui-kit';
+
+
 
 class App extends Component {
   constructor() {
@@ -7,7 +10,7 @@ class App extends Component {
     this.state = {
       person: {
         fullName: 'Wafa Slim',
-        bio: 'I am 35 years old',
+        bio: 'Graduated from the National School of Engineering of Monastir',
         imgSrc: 'Wafa.png',
         profession: 'Energy Engineer'
       },
@@ -34,18 +37,44 @@ class App extends Component {
  
     return (
       <div className='App'>
-        { this.state.shows && /*This conditional rendering checks the value of 'this.state.shows' If it is true,
+         { this.state.shows && /*This conditional rendering checks the value of 'this.state.shows' If it is true,
          the code inside the following parentheses will be rendered. If it is false, the code will be skipped*/
-        (<div style={{fontSize:'medium',fontwight:'normal',fontFamily:'Arial, sans-serif'}}> 
-            <h1 style={{fontSize:'medium',fontwight:'normal'}}>{this.state.person.fullName}</h1> 
-            <p>{this.state.person.bio}</p>
-            <p>{this.state.person.profession}</p>
-            <img src={this.state.person.imgSrc} alt='' className='img'/>
-        </div>)
-        }
-        <br></br>
+        
+    (<div className="gradient-custom-2">
+      <MDBContainer className="py-5 h-100">
+        <MDBRow className="justify-content-center align-items-center h-100">
+          <MDBCol lg="9" xl="7">
+            <MDBCard>
+              <div className="rounded-top text-white d-flex flex-row" style={{ height: 200,backgroundColor:'black' }}>
+                <div className="ms-4 mt-5 d-flex flex-column" style={{ width: '150' }}>
+                  <MDBCardImage src={this.state.person.imgSrc} alt='' className="mt-4 mb-2 img-thumbnail" fluid style={{ width: '150px', zIndex: 1 }} />
+                  <MDBBtn className="prof" outline color="dark" style={{height: '36px', overflow: 'visible',marginLeft:15}}>
+                    Edit profile
+                  </MDBBtn>
+                </div>
+                <div className="ms-3">
+                  <MDBTypography tag="h5">Based in</MDBTypography>
+                  <MDBCardText>Tunisia</MDBCardText>
+                </div>
+              </div>
+              <MDBCardBody className="text-black p-4">
+                <div className="mb-5">
+                  <p className="lead fw-normal mb-1">About</p>
+                  <div className="p-4" style={{ backgroundColor: '#f8f9fa' }}>
+                    <MDBCardText className="font-italic mb-1">{this.state.person.fullName}</MDBCardText>
+                    <MDBCardText className="font-italic mb-1">{this.state.person.bio}</MDBCardText>
+                    <MDBCardText className="font-italic mb-0">{this.state.person.profession}</MDBCardText>
+                  </div>
+                </div>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+    </div>)
+  }
         {/* When the button is clicked, it calls the 'this.handleShowPerson()' method*/}
-        <button onClick={()=>this.handleShowPerson()} className='btn'>Click me</button>
+        <button onClick={()=>this.handleShowPerson()} className='btn'>Hide profile</button>
         <p>{this.state.counter}</p>
      </div>
     );

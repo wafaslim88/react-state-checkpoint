@@ -5,28 +5,80 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: '#9de2ff';
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    background-color: aqua;
+}
+.mt-4 {
+  margin-top: 60px;
+  border-radius: 10%;
+}
+.mb-5{
+  color: rgb(194, 90, 194);
+}
+
+.lead{
+  margin-top: 150px;
+  color: #000;
+  font-size:x-large;
+  font-weight: 100;
+  font-weight: bold;
+  text-decoration: underline;
+  position: relative;
+  top: 10px;
+}
+.ms-3{
+  position: relative;
+  top: -220px;
+  color: blanchedalmond;
+  font-size: larger;
+
+}
+.prof{
+ margin-top: 50px;
+ position: relative;
+ top: 40px;
+ left: -130px;
+ cursor: pointer;
+ border-color: #332d2d;
+ border-radius: 20%;
+ background-color: rgb(255, 243, 255);
+}
+.p-4{
+  height: 200px;
 }
 .App{
-  font-size: 15 ;
-  font-weight: 400;
+ 
   width: 40%;
-  border-radius: 2px;
-  border-color: rgb(161, 115, 115);
-  margin-left: 400px;
-  height: 500px;
-  background-color: bisque;
-  font-weight: normal;
-  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  margin-left: 250px;
+  margin-top: 5px;
+  position: relative;
+  left: 150px;
+  border : 2px solid;
+  border-color: #e6d4e9;
+  box-shadow: inset;
+}
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fbc2eb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
 }
 
 .btn{
   margin-right: 200px;
   margin-left: 200px;
+  background-color: #e2dce0;
+  height: 40px;
+  border-radius: 20%;
 }
 .img{
   padding-left: 100px;
