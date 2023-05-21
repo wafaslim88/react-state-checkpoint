@@ -7,6 +7,7 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 class App extends Component {
   constructor() {
     super();
+    // Setting up state
     this.state = {
       person: {
         fullName: 'Wafa Slim',
